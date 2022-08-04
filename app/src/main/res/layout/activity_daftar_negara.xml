@@ -12,6 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:icon="@drawable/ic_baseline_add_24"
+        android:drawableStart="@drawable/ic_baseline_add_24"
         android:text="@string/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
