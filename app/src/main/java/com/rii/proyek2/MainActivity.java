@@ -34,7 +34,13 @@ public class MainActivity extends AppCompatActivity {
                 String password = etPassword.getEditText().getText().toString();
 
                 //validasi
-                if(username.equals("jmp-a") && password.equals("123")) {
+                if(username.isEmpty() && password.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Isian Kosong!", Toast.LENGTH_SHORT).show();
+                } else if(!username.isEmpty() && password.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Password wajib diisi!", Toast.LENGTH_SHORT).show();
+                } else if(username.isEmpty() && !password.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Username wajib diisi!", Toast.LENGTH_SHORT).show();
+                } else if(username.equals("jmp-a") && password.equals("123")) {
                     //mencegah untuk kembali ke activity login
                     finish();
 
